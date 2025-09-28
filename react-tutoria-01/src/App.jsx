@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import TodoList from './components/TodoList'
 import Profile from './components/Profile'
+import ShoppingList from './components/ShoppingList'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <TodoList/>
       <Profile/>
+      <ShoppingList/>
     </>
   )
 }
