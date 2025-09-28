@@ -1,16 +1,68 @@
-# React + Vite
+### Exercise: Mastering `useState` in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this exercise, you’ll learn how to use the `useState` hook for managing state in various scenarios, including basic usage, arrays, objects, and arrays of objects.
 
-Currently, two official plugins are available:
+#### Step 1: Basic Usage of `useState`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Create a new file called `Counter.jsx`.
+2. Inside this file, create a functional component called `Counter`.
+3. Use `useState` to manage a simple counter state.
+   - Initialize the state with a value of `0`.
+   - Create a button to increment the counter by `1` when clicked.
+   - Display the current value of the counter.
 
-## React Compiler
+#### Step 2: `useState` with an Array of Data
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Create a new file called `TodoList.jsx`.
+2. Inside this file, create a functional component called `TodoList`.
+3. Use `useState` to manage an array of todo items.
+   - Initialize the state with an empty array.
+   - Create a form to add new todo items to the list.
+   - Display the list of todo items.
 
-## Expanding the ESLint configuration
+#### Step 3: `useState` with an Object of Data
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Create a new file called `Profile.jsx`.
+2. Inside this file, create a functional component called `Profile`.
+3. Use `useState` to manage an object with user profile information.
+   - Initialize the state with an object containing `name` and `age`.
+   - Provide input fields to update the `name` and `age`.
+   - Display the updated profile information.
+
+#### Step 4: `useState` with an Array of Objects
+
+1. Create a new file called `ShoppingList.jsx`.
+2. Inside this file, create a functional component called `ShoppingList`.
+3. Use `useState` to manage an array of objects, where each object represents a shopping item with `name` and `quantity`.
+   - Initialize the state with an empty array.
+   - Create a form to add new items to the list.
+   - Display the list of shopping items.
+
+#### Step 5: Render All Components in `App.jsx`
+
+1. In your `App.jsx` file, import the `Counter`, `TodoList`, `Profile`, and `ShoppingList` components:
+
+   ```jsx
+   import Counter from "./Counter";
+   import TodoList from "./TodoList";
+   import Profile from "./Profile";
+   import ShoppingList from "./ShoppingList";
+   ```
+
+2. Inside the `App` component, render all four components:
+
+   ```jsx
+   function App() {
+     return (
+       <div>
+         <h1>React useState Examples</h1>
+         <Counter />
+         <TodoList />
+         <Profile />
+         <ShoppingList />
+       </div>
+     );
+   }
+
+   export default App;
+   ```
